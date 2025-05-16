@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erick Gunawan - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #6B73FF 0%, #000DFF 100%);
+        }
+        .skill-pill {
+            transition: all 0.3s ease;
+        }
+        .skill-pill:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .timeline-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 16px;
+            top: 30px;
+            height: calc(100% - 30px);
+            width: 2px;
+            background-color: #e5e7eb;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .project-image {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+        }
+        .project-image:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .project-tab {
+            transition: all 0.3s ease;
+        }
+        .project-tab.active {
+            background-color: #3B82F6;
+            color: white;
+        }
+        .tech-badge {
+            font-size: 0.75rem;
+            padding: 0.25rem 0.5rem;
+            border-radius: 9999px;
+            background-color: #EFF6FF;
+            color: #1D4ED8;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Header -->
+    <header class="gradient-bg text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-2">Erick Gunawan</h1>
+                    <p class="text-xl mb-4">Informatics Engineer | Web Developer | Deep Learning Enthusiast</p>
+                    <div class="flex flex-wrap gap-2">
+                        <a href="tel:+6281320593533" class="bg-white text-blue-600 px-4 py-2 rounded-full flex items-center">
+                            <i class="fas fa-phone mr-2"></i> +6281320593533
+                        </a>
+                        <a href="mailto:erickgnwnt@gmail.com" class="bg-white text-blue-600 px-4 py-2 rounded-full flex items-center">
+                            <i class="fas fa-envelope mr-2"></i> erickgnwnt@gmail.com
+                        </a>
+                        <div class="bg-white text-blue-600 px-4 py-2 rounded-full flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2"></i> Bandung, West Java
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="w-48 h-48 md:w-64 md:h-64 rounded-full bg-white flex items-center justify-center shadow-xl overflow-hidden">
+                        <img src="img/foto.jpg" alt="Erick Gunawan" class="w-full h-full object-cover rounded-full">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+        <!-- Profile Section -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-6 text-gray-800 border-b-2 border-blue-500 pb-2 inline-block">PROFILE</h2>
+            <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+                <p class="text-gray-700 leading-relaxed">
+                    A bachelor of Informatics from Bandung National Institute of Technology (ITENAS). Understanding of programming language such as python and HTML to develop a website and machine learning. Has internship experience in web development and the ISO 27001 audit documentation in 6 months. Seeking for a new working environment to grow with and develop expertise. Deep learning Enthusiast especially at text classification.
+                </p>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-6 text-gray-800 border-b-2 border-blue-500 pb-2 inline-block">EDUCATION</h2>
+            <div class="space-y-6">
+                <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+                    <div class="flex flex-col md:flex-row md:justify-between mb-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Institut Teknologi Nasional Bandung / Informatics Engineering</h3>
+                        <span class="text-blue-600 font-medium">2018 - 2023</span>
+                    </div>
+                    <p class="text-gray-600 mb-2">Bachelor Degree GPA: 3.49/4.00</p>
+                    <div class="mt-4">
+                        <h4 class="font-medium text-gray-700 mb-2">Activities:</h4>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1">
+                            <li>Member Of Badan Perwakilan Mahasiswa ITENAS</li>
+                            <li>Member Of Taekwondo ITENAS</li>
+                        </ul>
+                    </div>
+                </div>
+
+               
+        </section>
+
+        <!-- Experience Section -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-6 text-gray-800 border-b-2 border-blue-500 pb-2 inline-block">EXPERIENCE</h2>
+            <div class="space-y-8">
+                <!-- Experience 1 -->
+                <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+                    <div class="flex flex-col md:flex-row md:justify-between mb-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Bank BTPN Tbk</h3>
+                        <span class="text-blue-600 font-medium">Jun 2024 - Nov 2024</span>
+                    </div>
+                    <p class="text-gray-600 mb-2 font-medium">IT Project Support, IT Regulatory Reporting</p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2 mt-4">
+                        <li>As part of the IT regulatory Reporting at BTPN</li>
+                        <li>Conduct User Requirement for projects and create a document such as BRD, SSDLC, FSD, SIT</li>
+                        <li>Handling issue specificaly at antasena reporting system, Fixing Logic or Mapping</li>
+                        <li>Bridging users with vendors For Enhancement Requirement or Discussion</li>
+                    </ul>
+                </div>
+
+                <!-- Experience 2 -->
+                <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+                    <div class="flex flex-col md:flex-row md:justify-between mb-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Dinas Lingkungan Hidup Kota Cimahi</h3>
+                        <span class="text-blue-600 font-medium">Jun 2022 - Jun 2024</span>
+                    </div>
+                    <p class="text-gray-600 mb-2 font-medium">Backend Developer, SITANGAN (Sistem Informasi Status Lingkungan Hidup)</p>
+                    
+                    <div class="mt-6 mb-4">
+                        <a href="https://sitangan.cimahikota.go.id" target="_blank" class="inline-block">
+                            <img src="https://sitangan.cimahikota.go.id/assets/img/logo-sitangan.png" alt="SITANGAN System" class="project-image w-full max-w-md mx-auto border border-gray-200">
+                        </a>
+                        <p class="text-center mt-2 text-sm text-gray-500">Click image to visit SITANGAN website</p>
+                    </div>
+                    
+                    <ul class="list-disc list-inside text-gray-600 space-y-2 mt-4">
+                        <li>Created a website in collaboration with DLH Cimahi City and environmental engineering using Laravel in the water quality and water quality status sections</li>
+                        <li>Contributed as a backend developer such as translating water quality status calculation formulas using javascript</li>
+                        <li>Led the water quality and water index division especially in the system development</li>
+                    </ul>
+                    
+                    <div class="mt-4">
+                        <a href="https://dlhkotacimahi.itenas.ac.id" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center">
+                            Visit Project <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Experience 3 -->
+                <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+                    <div class="flex flex-col md:flex-row md:justify-between mb-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Deep Learning Developer (Final Project)</h3>
+                        <span class="text-blue-600 font-medium">Feb 2022 - Sep 2023</span>
+                    </div>
+                    <p class="text-gray-600 mb-2 font-medium">Brand Sentiment Analysis</p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2 mt-4">
+                        <li>Made a brand flip ID sentiment analysis using deep learning</li>
+                        <li>Comparing two different pretrained model of transformer BERT and RoBERTa for Sentiment Analysis</li>
+                        <li>Made a website application model for sentiment analysis task</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-6 text-gray-800 border-b-2 border-blue-500 pb-2 inline-block">PROJECTS</h2>
+            
+            <!-- Project Tabs -->
+            <div class="flex mb-6 bg-gray-100 rounded-lg p-1">
+                <button class="project-tab active flex-1 py-2 px-4 rounded-lg font-medium" onclick="showProject('sentiment')">
+                    Sentiment Analysis with Transformer
+                </button>
+                <button class="project-tab flex-1 py-2 px-4 rounded-lg font-medium" onclick="showProject('sitangan')">
+                    SITANGAN Web Application
+                </button>
+            </div>
+            
+            <!-- Sentiment Analysis Project -->
+            <div id="sentiment-project" class="project-content">
+                <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+                    <div class="flex flex-col md:flex-row md:justify-between mb-4">
+                        <h3 class="text-2xl font-semibold text-gray-800">Sentiment Analysis with Transformer and RoBERTA</h3>
+                        <span class="text-blue-600 font-medium">Final Project (2023)</span>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">TensorFlow</span>
+                        <span class="tech-badge">HuggingFace</span>
+                        <span class="tech-badge">BERT</span>
+                        <span class="tech-badge">RoBERTa</span>
+                        <span class="tech-badge">NLP</span>
+                    </div>
+                    
+                    <p class="text-gray-700 mb-4">
+                        Case Review: FLIP ID Natural Language Processing. This research implemented sentiment analysis using neural network transformer methods, specifically comparing BERT and RoBERTa models for sentiment classification tasks. RoBERTa was expected to outperform its predecessor in sentiment classification accuracy.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                        <div class="border rounded-lg overflow-hidden">
+                            <img src="https://miro.medium.com/v2/resize:fit:1400/1*JpGoZqI9MV9U5VK1h2Tv2g.png" alt="Transformer Architecture" class="w-full h-48 object-cover">
+                            <div class="p-3">
+                                <h4 class="font-medium">Transformer Architecture</h4>
+                                <p class="text-sm text-gray-600">The foundation of BERT and RoBERTa models</p>
+                            </div>
+                        </div>
+                        <div class="border rounded-lg overflow-hidden">
+                            <img src="https://www.researchgate.net/publication/342310417/figure/fig1/AS:896652643405824@1590740213842/Confusion-matrix-for-the-BERT-model.png" alt="Confusion Matrix" class="w-full h-48 object-cover">
+                            <div class="p-3">
+                                <h4 class="font-medium">Confusion Matrix</h4>
+                                <p class="text-sm text-gray-600">Model performance evaluation</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h4 class="font-medium text-gray-700 mb-2">Key Features:</h4>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1">
+                            <li>Implemented state-of-the-art transformer models for sentiment analysis</li>
+                            <li>Collected and preprocessed Indonesian language dataset from FLIP ID</li>
+                            <li>Fine-tuned both BERT and RoBERTa models for comparison</li>
+                            <li>Developed a web interface for real-time sentiment prediction</li>
+                            <li>Achieved accuracy improvements with RoBERTa architecture</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mt-6">
+                        <a href="https://etd.lib.itenas.ac.id/index.php?p=show_detail&id=16318&keywords=" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg inline-flex items-center">
+                            <i class="fas fa-book-open mr-2"></i> View Research Paper
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- SITANGAN Project -->
+            <div id="sitangan-project" class="project-content hidden">
+                <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+                    <div class="flex flex-col md:flex-row md:justify-between mb-4">
+                        <h3 class="text-2xl font-semibold text-gray-800">SITANGAN Web Application</h3>
+                        <span class="text-blue-600 font-medium">DLH Cimahi (2022-2024)</span>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="tech-badge">Laravel</span>
+                        <span class="tech-badge">JavaScript</span>
+                        <span class="tech-badge">MySQL</span>
+                        <span class="tech-badge">GIS</span>
+                        <span class="tech-badge">Bootstrap</span>
+                        <span class="tech-badge">Chart.js</span>
+                    </div>
+                    
+                    <p class="text-gray-700 mb-4">
+                        Sistem Informasi Teknik Lingkungan (SITANGAN) is a web-based application for presenting research data conducted by the Environmental Agency of Cimahi City. It includes pollution load data, monitoring point information, water quality index, and water quality status.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                        <div class="border rounded-lg overflow-hidden">
+                            <img src="https://sitangan.cimahikota.go.id/assets/img/screenshots/dashboard.png" alt="Dashboard" class="w-full h-40 object-cover">
+                            <div class="p-3">
+                                <h4 class="font-medium">Dashboard</h4>
+                                <p class="text-sm text-gray-600">Overview of environmental data</p>
+                            </div>
+                        </div>
+                        <div class="border rounded-lg overflow-hidden">
+                            <img src="https://sitangan.cimahikota.go.id/assets/img/screenshots/map.png" alt="Geographic View" class="w-full h-40 object-cover">
+                            <div class="p-3">
+                                <h4 class="font-medium">Geographic View</h4>
+                                <p class="text-sm text-gray-600">Interactive map of monitoring points</p>
+                            </div>
+                        </div>
+                        <div class="border rounded-lg overflow-hidden">
+                            <img src="https://sitangan.cimahikota.go.id/assets/img/screenshots/report.png" alt="Data Report" class="w-full h-40 object-cover">
+                            <div class="p-3">
+                                <h4 class="font-medium">Data Report</h4>
+                                <p class="text-sm text-gray-600">Detailed water quality analysis</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h4 class="font-medium text-gray-700 mb-2">Key Features:</h4>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1">
+                            <li>Interactive dashboard with real-time data visualization</li>
+                            <li>Geographic information system for monitoring points</li>
+                            <li>Water quality index calculation and reporting</li>
+                            <li>Data export functionality for further analysis</li>
+                            <li>User management system for different access levels</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mt-6 flex flex-wrap gap-3">
+                        <a href="https://sitangan.cimahikota.go.id" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg inline-flex items-center">
+                            <i class="fas fa-external-link-alt mr-2"></i> Visit Live Application
+                        </a>
+                        <a href="https://eproceeding.itenas.ac.id/index.php/fti/article/view/3206" target="_blank" class="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-lg inline-flex items-center">
+                            <i class="fas fa-book-open mr-2"></i> View Research Paper
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section>
+            <h2 class="text-3xl font-bold mb-6 text-gray-800 border-b-2 border-blue-500 pb-2 inline-block">SKILLS</h2>
+            <div class="flex flex-wrap gap-3">
+                <span class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full">Website Development</span>
+                <span class="skill-pill bg-green-100 text-green-800 px-4 py-2 rounded-full">Javascript</span>
+                <span class="skill-pill bg-yellow-100 text-yellow-800 px-4 py-2 rounded-full">Python</span>
+                <span class="skill-pill bg-red-100 text-red-800 px-4 py-2 rounded-full">HTML</span>
+                <span class="skill-pill bg-purple-100 text-purple-800 px-4 py-2 rounded-full">Microsoft Word</span>
+                <span class="skill-pill bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full">Machine Learning</span>
+                <span class="skill-pill bg-teal-100 text-teal-800 px-4 py-2 rounded-full">SQL Language</span>
+                <span class="skill-pill bg-pink-100 text-pink-800 px-4 py-2 rounded-full">JIRA Project Management</span>
+                <span class="skill-pill bg-orange-100 text-orange-800 px-4 py-2 rounded-full">Laravel Framework</span>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="gradient-bg text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#" class="text-white hover:text-blue-200">
+                    <i class="fab fa-linkedin text-2xl"></i>
+                </a>
+                <a href="#" class="text-white hover:text-blue-200">
+                    <i class="fab fa-github text-2xl"></i>
+                </a>
+                <a href="#" class="text-white hover:text-blue-200">
+                    <i class="fab fa-twitter text-2xl"></i>
+                </a>
+            </div>
+            <p>&copy; 2023 Erick Gunawan. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function showProject(projectId) {
+            // Hide all project contents
+            document.querySelectorAll('.project-content').forEach(content => {
+                content.classList.add('hidden');
+            });
+            
+            // Remove active class from all tabs
+            document.querySelectorAll('.project-tab').forEach(tab => {
+                tab.classList.remove('active');
+                tab.classList.remove('bg-blue-600');
+                tab.classList.remove('text-white');
+                tab.classList.add('bg-gray-100');
+            });
+            
+            // Show selected project and mark tab as active
+            document.getElementById(projectId + '-project').classList.remove('hidden');
+            event.target.classList.add('active', 'bg-blue-600', 'text-white');
+            event.target.classList.remove('bg-gray-100');
+        }
+    </script>
+</body>
+</html>
